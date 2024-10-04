@@ -1,0 +1,71 @@
+Problem-Solving Checklist
+ Understand the Problem:
+
+Implement a caesar cipher that takes in a string and the shift factor and then outputs the modified string:
+
+  > caesar_cipher("What a string!", 5)
+  => "Bmfy f xywnsl!"
+Quick Tips:
+
+You will need to remember how to convert a string into a number.
+Don’t forget to wrap from z to a.
+Don’t forget to keep the same case.
+
+
+Restate the problem in your own words
+Create an encoder that takes a word and a number that determines how many letters to shift over, then print the new string
+
+Ask clarifying questions (e.g., formulas, expected outputs).
+Does the cipher shift only one direction? Or do we take the postive number to shift right and the negative to shift left? 
+The cipher shifts to the left to encrypt a string and shifts to the right to decrpt the string
+Does Ruby have a built-in alphabet to use or do I need to create one?
+
+Create a clear problem statement.
+Identify Inputs, Processes, and Outputs
+
+Inputs 
+String - for the text to be encrypted
+String - the number of letters to shift <- this is user input that will be turned into an intger to work with
+
+Find the nouns (inputs/outputs) in the problem.
+Nouns 
+String (both the input and the output)
+Shift Factor
+
+Identify the verbs (processes).
+Verbs
+Takes?
+Outputs?
+
+List the inputs (e.g., bill amount, tip rate).
+Input string, shift factor
+
+Define the processes (e.g., calculate the tip).
+Count how many letters to shift over
+
+Determine the outputs (e.g., tip amount, total amount).
+The encrypted string
+
+Use Test Plans to Guide Design:
+
+Write test plans with inputs and expected results.
+Compare the actual results to the expected results.
+Create multiple test plans to cover different scenarios.
+Write the Algorithm in Pseudocode:
+
+Write steps of the algorithm in pseudocode.
+Include variable names and display messages.
+ Focus on the logic, not exact syntax.
+
+Get input string from user - store it in a variable 'orig_string'
+Get input number to shift over from user - number needs to be converted from a string to an integer, store in a variable 'shift_factor'
+Initialize a variable 'encrypted_str' to an empty string to hold the encrypted letters
+Replace the original letter with the new letter
+	can convert to ascii values using .ord and add the shift value to it to move it to the new value then convert back to letter using .char
+		if letter shifts beyond 'z' subtract 26 from the shift value to get the negative index and subtract from the current position
+Assign each letter to the variable 'encrypted_str'
+Print the encrypted string to the screen
+
+ Break Down the Problem:
+
+ Solve and test each small section before moving on.
